@@ -21,7 +21,11 @@ cd ccminer
 chmod +x build.sh
 chmod +x autogen.sh
 chmod +x configure.sh
-./build.sh
+rm -f Makefile.in
+rm -f config.status
+bash autogen.sh || echo done
+CFLAGS="-O3" bash configure.sh
+make
 clear
 echo "Copying ccminer to bin.."
 sleep 4
