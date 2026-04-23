@@ -11,7 +11,7 @@ sleep 4
 pkg upg -y
 clear
 echo "Installing required packages..."
-pkg i libjansson build-essential git wget -y
+pkg install libjansson automake build-essential wget git  -y
 clear
 echo "Building ccminer..."
 cd $HOME
