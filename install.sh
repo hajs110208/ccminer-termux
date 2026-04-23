@@ -7,10 +7,11 @@ else
 fi
 clear
 echo "Running pkg upgrade..."
-sleep 4
+sleep 1
 pkg upg -y
 clear
 echo "Installing required packages..."
+sleep 1
 pkg install libjansson automake build-essential wget git  -y
 clear
 echo "Building ccminer..."
